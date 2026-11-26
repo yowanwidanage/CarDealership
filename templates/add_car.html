@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Car</title>
+    <link rel="stylesheet" href="{% static 'cars/style.css' %}">
+</head>
+
+<body>
+
+    <h1>Add New Car</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Save Car</button>
+    </form>
+
+</body>
+</html>
